@@ -160,3 +160,75 @@ test = false;
 console.log(!test ? 'Верно' : 'Неверно');
 
 console.log('');
+
+// Работа с && , ||
+console.log('&&, ||:');
+// 1.
+console.log('isOver0Under5(5) = ', isOver0Under5(5));
+console.log('isOver0Under5(0) = ', isOver0Under5(0));
+console.log('isOver0Under5(-3) = ', isOver0Under5(-3));
+console.log('isOver0Under5(2) = ', isOver0Under5(2));
+
+console.log('');
+
+/**
+ *
+ * @param {number} a
+ * @return {boolean|boolean}
+ */
+function isOver0Under5 (a) {
+  return a > 0 && a < 5;
+}
+
+// 2.
+
+console.log('a === 0 || a === 2 ? a += 7 : a /= 10 , a=(5) = ', second(5));
+console.log('a === 0 || a === 2 ? a += 7 : a /= 10 , a=(0) = ', second(0));
+console.log('a === 0 || a === 2 ? a += 7 : a /= 10 , a=(-3) = ', second(-3));
+console.log('a === 0 || a === 2 ? a += 7 : a /= 10 , a=(2) = ', second(2));
+
+console.log('');
+
+/**
+ *
+ * @param {number} a
+ * @return {number}
+ */
+function second (a) {
+  return a === 0 || a === 2 ? a += 7 : a /= 10;
+}
+
+// 3.
+
+console.log('a <= 1 && b >= 3 ? a + b : a - b , (1, 3) = ', third(1, 3));
+console.log('a <= 1 && b >= 3 ? a + b : a - b , (0, 6) = ', third(0, 6));
+console.log('a <= 1 && b >= 3 ? a + b : a - b , (3, 5) = ', third(3, 5));
+
+console.log('');
+
+/**
+ *
+ * @param {number} a
+ * @param {number} b
+ * @return {number}
+ */
+function third (a, b) {
+  return a <= 1 && b >= 3 ? a + b : a - b;
+}
+
+// 4.
+
+console.log('a > 2 && a < 11 || b >= 6 && b < 14 , (7, 6) = ', fourth(7, 6));
+console.log('a > 2 && a < 11 || b >= 6 && b < 14 , (1, 14) = ', fourth(1, 14));
+
+console.log('');
+
+/**
+ *
+ * @param {number} a
+ * @param {number} b
+ * @return {boolean|boolean}
+ */
+function fourth (a, b) {
+  return a > 2 && a < 11 || b >= 6 && b < 14;
+}
