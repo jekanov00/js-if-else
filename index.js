@@ -1,5 +1,5 @@
 // if-else
-console.log('if-else:')
+console.log('if-else:');
 
 // 1.
 console.log('isZero(1) = ', isZero(1));
@@ -128,3 +128,35 @@ console.log('');
 function isStringOne (a) {
   return a === '1';
 }
+
+// Логические переменные
+console.log('Логические переменные:');
+// 1.
+let test = true;
+
+if (test) {
+  console.log('Верно');
+} else {
+  console.log('Неверно');
+}
+
+test = false;
+
+console.log(test ? 'Верно' : 'Неверно');
+
+console.log('');
+
+// 2.
+test = true;
+
+if (!test) {
+  console.log('Верно');
+} else {
+  console.log('Неверно');
+}
+
+test = false;
+
+console.log(!test ? 'Верно' : 'Неверно');
+
+console.log('');
